@@ -34,7 +34,9 @@ const SideBar = () => {
 };
 
 const getChats = async () => {
-  const response = await fetch("http://localhost:3000/api/getConversations");
+  const response = await fetch(
+    `${import.meta.env.VITE_BACKEND_URL}/api/getConversations`
+  );
   const data = await response.json();
   return data;
 };
